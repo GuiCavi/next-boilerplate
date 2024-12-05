@@ -133,7 +133,7 @@
         ],
         "pathGroups": [
           {
-            "pattern": "@/**",
+            "pattern": "@/components/**",
             "group": "internal",
             "position": "after"
           }
