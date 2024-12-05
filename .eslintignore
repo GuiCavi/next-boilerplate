@@ -1,0 +1,7 @@
+*.ico
+*.svg
+*.css
+
+build/
+coverage/
+.next/
