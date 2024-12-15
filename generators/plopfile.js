@@ -27,11 +27,16 @@ module.exports = (plop) => {
         templateFile: "templates/component/index.ts.hbs",
       },
       {
+        type: "add",
+        path: "../src/components/{{pascalCase name}}/story/{{pascalCase name}}.stories.tsx",
+        templateFile: "templates/component/stories.tsx.hbs",
+      },
+      {
         type: "modify",
         path: "../src/components/index.ts",
         pattern: /(\/\/ -- PLOP --)/gi,
         template: "$1\nexport * from \"./{{pascalCase name}}\";",
-      }
+      },
       // {
       //   type: "add",
       //   path: "../src/components/{{pascalCase name}}/stories.tsx",
