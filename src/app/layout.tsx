@@ -6,6 +6,7 @@ import "./globals.css";
 const font = Font({
   weight: ["100", "400", "700"],
   display: "swap",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
