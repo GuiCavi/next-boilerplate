@@ -13,17 +13,5 @@ const config: StorybookConfig = {
 
     return config;
   },
-  typescript: {
-    reactDocgenTypescriptOptions: {
-      // Speeds up Storybook build time
-      compilerOptions: {
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
-      // Only compile files that have stories for faster local development performance
-      include: ["src/**/*.{ts,tsx}"],
-    },
-    reactDocgen: "react-docgen",
-  },
 };
 export default config;
