@@ -134,7 +134,7 @@ export default [
               position: "after",
             },
             {
-              pattern: "./**/*.{css,scss}",
+              pattern: "{.,..}/**/*.{css,scss}",
               group: "type",
               position: "after",
             },
