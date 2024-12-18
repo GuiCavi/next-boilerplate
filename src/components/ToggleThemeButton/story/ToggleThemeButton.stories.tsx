@@ -11,6 +11,6 @@ export default meta;
 
 type Story = StoryObj<typeof ToggleThemeButton>;
 
-export const Variant: Story = {
+export const Default: Story = {
   args: {},
 };
