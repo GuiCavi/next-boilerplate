@@ -1,6 +1,9 @@
 import { Inter as Font } from "next/font/google";
 
+import { ThemeProvider } from "@/providers";
+
 import type { Metadata } from "next";
+
 import "./globals.css";
 
 const font = Font({
@@ -20,11 +23,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light" suppressHydrationWarning>
       <body
         className={`${font.className} antialiased`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

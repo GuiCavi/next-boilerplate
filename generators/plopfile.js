@@ -37,16 +37,30 @@ module.exports = (plop) => {
         pattern: /(\/\/ -- PLOP --)/gi,
         template: "$1\nexport * from \"./{{pascalCase name}}\";",
       },
-      // {
-      //   type: "add",
-      //   path: "../src/components/{{pascalCase name}}/stories.tsx",
-      //   templateFile: "templates/component/stories.tsx.hbs",
-      // },
-      // {
-      //   type: "add",
-      //   path: "../src/components/{{pascalCase name}}/test.tsx",
-      //   templateFile: "templates/component/test.tsx.hbs",
-      // },
+    ],
+  });
+
+  plop.setGenerator("provider", {
+    description: "",
+    prompts: [
+      {
+        type: "input",
+        name: "name",
+        message: "What is your provider name?",
+      },
+    ],
+    actions: [
+      {
+        type: "add",
+        path: "../src/providers/{{pascalCase name}}.tsx",
+        templateFile: "templates/provider/provider.tsx.hbs",
+      },
+      {
+        type: "modify",
+        path: "../src/providers/index.ts",
+        pattern: /(\/\/ -- PLOP --)/gi,
+        template: "$1\nexport { default as {{pascalCase name}} } from \"./{{pascalCase name}}\";",
+      },
     ],
   });
 };

@@ -1,0 +1,31 @@
+import {
+  createContext, PropsWithChildren, useContext, useMemo,
+} from "react";
+
+interface {{pascalCase name}}ContextProps {
+
+}
+
+const {{pascalCase name}}Context = createContext({} as {{pascalCase name}}ContextProps);
+
+type {{pascalCase name}}ProviderProps = {
+
+};
+
+function {{pascalCase name}}Provider({ children }: PropsWithChildren<{{pascalCase name}}ProviderProps>) {
+  const value = useMemo(() => ({}), []);
+
+  return (
+    <{{pascalCase name}}Context.Provider value={value}>
+      {children}
+    </{{pascalCase name}}Context.Provider>
+  );
+}
+
+export default {{pascalCase name}}Provider;
+
+export const use{{pascalCase name}} = () => {
+  const context = useContext({{pascalCase name}}Context);
+
+  return context;
+};

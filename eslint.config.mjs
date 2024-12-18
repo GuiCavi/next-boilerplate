@@ -116,6 +116,7 @@ export default [
       "import/order": [
         "error",
         {
+          named: true,
           "newlines-between": "always",
           groups: [
             "builtin",
@@ -128,8 +129,13 @@ export default [
           ],
           pathGroups: [
             {
-              pattern: "@/components/**",
+              pattern: "@/**",
               group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "./**/*.{css,scss}",
+              group: "type",
               position: "after",
             },
           ],
@@ -138,6 +144,7 @@ export default [
             order: "asc",
             caseInsensitive: true,
           },
+          warnOnUnassignedImports: true,
         },
       ],
       "import/newline-after-import": [
