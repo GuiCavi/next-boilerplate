@@ -54,6 +54,9 @@ importers:
       '@storybook/addon-onboarding':
         specifier: ^8.4.7
         version: 8.4.7(react@19.0.0-rc-66855b96-20241106)(storybook@8.4.7)
+      '@storybook/addon-styling-webpack':
+        specifier: ^1.0.1
+        version: 1.0.1(storybook@8.4.7)(webpack@5.97.0(esbuild@0.24.0))
       '@storybook/addon-themes':
         specifier: ^8.4.7
         version: 8.4.7(storybook@8.4.7)
@@ -1657,6 +1660,11 @@ packages:
     peerDependencies:
       storybook: ^8.4.7
 
+  '@storybook/addon-styling-webpack@1.0.1':
+    resolution: {integrity: sha512-5n+SXPfMTc4m7sWaJWPWjoHYWc6/B111M2Ia55toQ3GV4ON4vVlTgH9FX+EgCkDticElj99HLTMDJkHRj2yvkg==}
+    peerDependencies:
+      webpack: ^5.0.0
+
   '@storybook/addon-themes@8.4.7':
     resolution: {integrity: sha512-MZa3eWTz0b3BQvF71WqLqvEYzDtbMhQx1IIluWBMMGzJ4sWBzLX85LoNMUlHsNd4EhEmAZ1xQQFIJpDWTBx0nQ==}
     peerDependencies:
@@ -1754,6 +1762,11 @@ packages:
         optional: true
       webpack:
         optional: true
+
+  '@storybook/node-logger@8.4.7':
+    resolution: {integrity: sha512-bsNMy9RgN4jVw5MMHMf0T04dX8a1lLTWq4iZoZkfdbshDKn5Z16brzPVwhFg2IE0YTEZi9XyA1NJLPgUTCcp7g==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
   '@storybook/preset-react-webpack@8.4.7':
     resolution: {integrity: sha512-geTSBKyrBagVihil5MF7LkVFynbfHhCinvnbCZZqXW7M1vgcxvatunUENB+iV8eWg/0EJ+8O7scZL+BAxQ/2qg==}
@@ -7486,6 +7499,13 @@ snapshots:
       storybook: 8.4.7
       ts-dedent: 2.2.0
 
+  '@storybook/addon-styling-webpack@1.0.1(storybook@8.4.7)(webpack@5.97.0(esbuild@0.24.0))':
+    dependencies:
+      '@storybook/node-logger': 8.4.7(storybook@8.4.7)
+      webpack: 5.97.0(esbuild@0.24.0)
+    transitivePeerDependencies:
+      - storybook
+
   '@storybook/addon-themes@8.4.7(storybook@8.4.7)':
     dependencies:
       storybook: 8.4.7
@@ -7682,6 +7702,10 @@ snapshots:
       - webpack-dev-server
       - webpack-hot-middleware
       - webpack-plugin-serve
+
+  '@storybook/node-logger@8.4.7(storybook@8.4.7)':
+    dependencies:
+      storybook: 8.4.7
 
   '@storybook/preset-react-webpack@8.4.7(@storybook/test@8.4.7(storybook@8.4.7))(esbuild@0.24.0)(react-dom@19.0.0-rc-66855b96-20241106(react@19.0.0-rc-66855b96-20241106))(react@19.0.0-rc-66855b96-20241106)(storybook@8.4.7)(typescript@5.7.2)':
     dependencies:

@@ -1,16 +1,9 @@
-import { Inter as Font } from "next/font/google";
-
+import { fontVariables } from "@/assets/fonts/fonts";
 import { ThemeProvider } from "@/providers";
 
 import type { Metadata } from "next";
 
 import "./globals.css";
-
-const font = Font({
-  weight: ["100", "400", "700"],
-  display: "swap",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Next Boilerplate",
@@ -25,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <body
-        className={`${font.className} antialiased`}
+        className={`${fontVariables.join(" ")} antialiased`}
       >
         <ThemeProvider
           attribute="class"
